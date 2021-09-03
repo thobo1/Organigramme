@@ -237,10 +237,10 @@ class MainWindow:
                     if lockProfil.getName() == name:
                         find = True
                         self.__keyCode.append(KeyCode(lastLockProfilID, name, room[0], name, 9000))
-                        room = Room(room[0])
-                        room.set_audit_code(room_audit_code)
-                        room.set_primary_key_code_key_code_id(room_primary_key_code_key_code_id)
-                        self.__room.append(Room())
+                        room1 = Room(room[0])
+                        room1.set_audit_code(room_audit_code)
+                        room1.set_primary_key_code_key_code_id(room_primary_key_code_key_code_id)
+                        self.__room.append(room1)
                         room_audit_code = room_audit_code+10
                         room_primary_key_code_key_code_id = room_primary_key_code_key_code_id+1
 
@@ -248,10 +248,10 @@ class MainWindow:
                     lastLockProfilID = lastLockProfilID + 1
                     self.__lockProfile.append(LockProfile(lastLockProfilID, name))
                     self.__keyCode.append(KeyCode(lastLockProfilID, name, room[0], name, 9000))
-                    room = Room(room[0])
-                    room.set_audit_code(room_audit_code)
-                    room.set_primary_key_code_key_code_id(room_primary_key_code_key_code_id)
-                    self.__room.append(Room())
+                    room1 = Room(room[0])
+                    room1.set_audit_code(room_audit_code)
+                    room1.set_primary_key_code_key_code_id(room_primary_key_code_key_code_id)
+                    self.__room.append(room1)
                     room_audit_code = room_audit_code + 10
                     room_primary_key_code_key_code_id = room_primary_key_code_key_code_id + 1
                     i = 1
