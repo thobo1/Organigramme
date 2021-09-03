@@ -102,13 +102,11 @@ class MainWindow:
 
     def tryToConnectDb(self, second_window, path_to_db, pwd):
 
-        second_window.destroy()
         self.__bdd.setPath(path_to_db)
         self.__bdd.setPassword(pwd.get("1.0", END))
         if self.__bdd.connect():
             second_window.destroy()
             self.__labelDatabaseConnection['text'] = "Connected"
-            self.__labelDatabaseConnection['fg'] = "#11E118"
             self.showDatabaseInformation()
         else:
             fInfos = Toplevel()  # Popup -> Toplevel()
@@ -235,8 +233,7 @@ class MainWindow:
                 for lockProfil in self.__lockProfile:
                     if lockProfil.getName() == name:
                         find = True
-                        lastLockProfilID = lastLockProfilID + 1
-                        self.__keyCode.append(KeyCode(lastLockProfilID, name, room, name, 9000))
+                        self.__keyCode.append(KeyCode(lastLockProfilID, name, room[0], name, 9000))
                 if not find:
                     lastLockProfilID = lastLockProfilID + 1
                     self.__lockProfile.append(LockProfile(lastLockProfilID, name))
