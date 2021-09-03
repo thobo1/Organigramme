@@ -10,6 +10,7 @@ from hotel import *
 from DataBaseOnportal.keyCode import *
 from DataBaseOnportal.lockProfile import *
 from DataBaseOnportal.lockProfilKeyCode import *
+from DataBaseOnportal.room import *
 
 
 
@@ -38,6 +39,7 @@ class MainWindow:
         self.__keyCodeMaster = []
         self.__lockProfile = []
         self.__lockProfileKeyCode = []
+        self.__room = []
 
 
     def getTabs(self):
@@ -195,7 +197,8 @@ class MainWindow:
         del self.__keyCode[:]
         del self.__keyCodeMaster[:]
         del self.__lockProfile[:]
-        lastKeyCodeId = 0
+        room_audit_code = 5010
+        room_primary_key_code_key_code_id = 8
         results = self.__bdd.select("KeyCode")
         # for r in results:
         #     self.__keyCode.append(
@@ -234,9 +237,23 @@ class MainWindow:
                     if lockProfil.getName() == name:
                         find = True
                         self.__keyCode.append(KeyCode(lastLockProfilID, name, room[0], name, 9000))
+                        room = Room(room[0])
+                        room.set_audit_code(room_audit_code)
+                        room.set_primary_key_code_key_code_id(room_primary_key_code_key_code_id)
+                        self.__room.append(Room())
+                        room_audit_code = room_audit_code+10
+                        room_primary_key_code_key_code_id = room_primary_key_code_key_code_id+1
+
                 if not find:
                     lastLockProfilID = lastLockProfilID + 1
                     self.__lockProfile.append(LockProfile(lastLockProfilID, name))
+                    self.__keyCode.append(KeyCode(lastLockProfilID, name, room[0], name, 9000))
+                    room = Room(room[0])
+                    room.set_audit_code(room_audit_code)
+                    room.set_primary_key_code_key_code_id(room_primary_key_code_key_code_id)
+                    self.__room.append(Room())
+                    room_audit_code = room_audit_code + 10
+                    room_primary_key_code_key_code_id = room_primary_key_code_key_code_id + 1
                     i = 1
                     while i < len(room):
                         if room[i] == "x":
