@@ -196,6 +196,7 @@ class MainWindow:
         # Récupération des usagers présent dans la BDD
         del self.__keyCode[:]
         del self.__keyCodeMaster[:]
+        del self.__lockProfile[:]
         lastKeyCodeId = 0
         results = self.__bdd.select("KeyCode")
         for r in results:
