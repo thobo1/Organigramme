@@ -236,7 +236,7 @@ class MainWindow:
                     if lockProfil.getName() == name:
                         find = True
                         lastLockProfilID = lastLockProfilID + 1
-                        self.__keyCode.append(KeyCode(lastLockProfilID, name, 1, name, 9000))
+                        self.__keyCode.append(KeyCode(lastLockProfilID, name, room, name, 9000))
                 if not find:
                     lastLockProfilID = lastLockProfilID + 1
                     self.__lockProfile.append(LockProfile(lastLockProfilID, name))
