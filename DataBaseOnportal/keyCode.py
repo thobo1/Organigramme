@@ -8,7 +8,7 @@ class KeyCode:
         self.__codeType = codeType
         self.__description = description
         self.__sequenceNumber = sequenceNumber
-        self.__modifiedDate = datetime.datetime.now()
+        self.__modifiedDate = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     def setKeyCodeId(self, keyCodeId):
         self.__keyCodeId = keyCodeId

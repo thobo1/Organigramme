@@ -2,7 +2,7 @@ class room:
     def __init__(self, roomId = None, name = None, description = None, typeRoom = None, status = None, mustBeUpdated = None, needsReinitialize = None,
                  hasBeenSynced = None, auditCode = None, lockProfilID = None, timeTableID = None, requiredAuthID = None, officeMode = None, allowProgrammingCard = None,
                  isAda = None, doorOpenTime = None, guestSequenceNumerLookAhed = None, masterSequenceNumberLookAhead = None, openOnWithdrawl = None, closeOnLever = None,
-                 lastModified = None, lastUpdated = None, hasBeenUpdated = None, defaultCardAuthsString = None, optionalCardAuthsString = None, shift = None, privacy = None,
+                 lastUpdated = None, hasBeenUpdated = None, defaultCardAuthsString = None, optionalCardAuthsString = None, shift = None, privacy = None,
                  defaultMasterKeyCodeID = None, includeSuiteKeyCode = None, attribute = None, customField1 = None, customField2 = None, primaryKeyCode_KeyCodeID = None,
                  serialNumber = None):
         self.__roomId = roomId
@@ -33,10 +33,14 @@ class room:
         self.__shift = shift
         self.__privacy = privacy
         self.__defaultMasterKeyCodeID = defaultMasterKeyCodeID
-        self.__includeSuiteKeyCode = includeSuiteKeyCode
+        self.__includeS_suite_key_code = includeSuiteKeyCode
         self.__attribute = attribute
-        self.__customField1 = customField1
-        self.__customField2 = customField2
-        self.__primaryKeyCode_KeyCodeID = primaryKeyCode_KeyCodeID
-        self.__serialNumber = serialNumber
+        self.__custom_field1 = customField1
+        self.__custom_field2 = customField2
+        self.__primary_key_code_key_code_id = primaryKeyCode_KeyCodeID
+        self.__serial_number = serialNumber
+
+
+
+
 
