@@ -281,6 +281,8 @@ class MainWindow:
             self.__bdd.insert(lockProfileKeyCode.getInsertString())
         for keyCode in self.__keyCode:
             self.__bdd.insert(keyCode.getInsertString())
+        for room in self.__room:
+            self.__bdd.insert(room.get_inset_string())
 
 
 
