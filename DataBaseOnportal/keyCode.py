@@ -48,7 +48,7 @@ class KeyCode:
 
 
     def getInsertString(self):
-            query = "INSERT INTO LockProfile(Name, CodeType, Description, SequenceNumber, ModifiedDate) VALUES ('%s', %s, '%s', %s, '%s')" % (
+            query = "INSERT INTO KeyCode(Name, CodeType, Description, SequenceNumber, ModifiedDate) VALUES ('%s', %s, '%s', %s, '%s')" % (
                 self.__name,
                 self.__codeType,
                 self.__description,
