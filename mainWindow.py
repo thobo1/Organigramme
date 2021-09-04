@@ -199,11 +199,6 @@ class MainWindow:
         del self.__lockProfile[:]
         room_audit_code = 5010
         room_primary_key_code_key_code_id = 8
-        results = self.__bdd.select("KeyCode")
-        # for r in results:
-        #     self.__keyCode.append(
-        #         KeyCode(r["KeyCodeId"], r["Name"], r["CodeType"], r["Description"], r["SequenceNumber"]))
-        #     lastKeyCodeId = r["KeyCodeId"]
         results = self.__bdd.select_condition("KeyCode","CodeType=6")
         for r in results:
             self.__keyCodeMaster.append(
