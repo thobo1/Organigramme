@@ -50,8 +50,8 @@ class Room:
         self.__commit = False
 
     def get_inset_string(self):
-        query = "INSERT INTO Room(Name, Type, Status, __must_be_updated, needs_reinitialize, has_been_synced, audit_code, LockProfileID," \
-                " LastModified, HasBeenInitialized, include_suite_key_code, Attribute, PrimaryKeyCode_KeyCodeID VALUES ('%s', %s, %s, %s, %s, %s," \
+        query = "INSERT INTO Room(Name, Type, Status, MustBeUpdated, NeedsReinitialize, HasBeenSynced, AuditCode, LockProfileID," \
+                " LastModified, HasBeenInitialized, IncludeSuiteKeyCode, Attribute, PrimaryKeyCode_KeyCodeID VALUES ('%s', %s, %s, %s, %s, %s," \
                 " %s, %s, '%s', %s, %s, %s, %s)" % (
                     self.__name,
                     self.__type,
