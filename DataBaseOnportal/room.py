@@ -51,7 +51,7 @@ class Room:
 
     def get_inset_string(self):
         query = "INSERT INTO Room(Name, Type, Status, MustBeUpdated, NeedsReinitialize, HasBeenSynced, AuditCode, LockProfileID," \
-                " LastModified, HasBeenInitialized, IncludeSuiteKeyCode, Attribute, PrimaryKeyCode_KeyCodeID VALUES ('%s', %s, %s, %s, %s, %s," \
+                " LastModified, HasBeenInitialized, IncludeSuiteKeyCode, Attribute, PrimaryKeyCode_KeyCodeID) VALUES ('%s', %s, %s, %s, %s, %s," \
                 " %s, %s, '%s', %s, %s, %s, %s)" % (
                     self.__name,
                     self.__type,
