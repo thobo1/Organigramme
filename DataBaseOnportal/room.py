@@ -57,7 +57,6 @@ class Room:
                     self.__type,
                     self.__status,
                     self.__must_be_updated,
-                    self.__must_be_updated,
                     self.__needs_reinitialize,
                     self.__has_been_synced,
                     self.__audit_code,
