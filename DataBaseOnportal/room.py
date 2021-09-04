@@ -66,6 +66,7 @@ class Room:
                     self.__includeS_suite_key_code,
                     self.__attribute,
                     self.__primary_key_code_key_code_id)
+        return query
 
     def set_commit(self, commit):
         self.__commit = commit

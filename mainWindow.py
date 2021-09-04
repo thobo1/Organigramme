@@ -230,7 +230,6 @@ class MainWindow:
 
             # Traitement des serrures de chambres
             for room in listRoom:
-                print(str(room[0])[0:-2])
                 find=False
                 name = "Chambres " + str(room[0])[0:-2]
                 for lockProfil in self.__lockProfile:
